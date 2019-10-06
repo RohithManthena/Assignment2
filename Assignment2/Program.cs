@@ -20,13 +20,13 @@ namespace _2019_Fall_Assignment2
          
 
             Console.WriteLine("Position to insert {0} is = {1}\n", target, SearchInsert(nums, target));*/
-/*            int[] nums1 = { 1, 2, 2, 1,5,5,8,8 };
-            int[] nums2 = { 2, 2,5,5,5,5,8 };
-            int[] intersect = Intersect(nums1, nums2);
+            //int[] nums1 = { 1, 2, 2, 1,5,5,8,8,12 };
+            //int[] nums2 = { 12,3,8,0,1,2, 2,5,5,5,5,8 };
+            //int[] intersect = Intersect(nums1, nums2);
 
-        
-            DisplayArray(intersect);
-            Console.WriteLine("\n");*/
+
+            //DisplayArray(intersect);
+            //Console.WriteLine("\n");
 
 
 
@@ -35,66 +35,67 @@ namespace _2019_Fall_Assignment2
             Console.WriteLine("Largest integer occuring once = {0}\n", LargestUniqueNumber(A));*/
 
 
-            }
-
-            /*string keyboard = "abcdefghijklmnopqrstuvwxyz";
-
-            string word = "cba";
-
-            Console.WriteLine("Time taken to type with one finger = {0}\n", CalculateTime(keyboard, word));
 
 
+            //string keyboard = "abcdefghijklmnopqrstuvwxyz";
 
-            int[,] image = { { 1, 1, 0 }, { 1, 0, 1 }, { 0, 0, 0 } };
+            //string word = "cba";
 
-            int[,] flipAndInvertedImage = FlipAndInvertImage(image);
-
-            Console.WriteLine("The resulting flipped and inverted image is:\n");
-
-            Display2DArray(flipAndInvertedImage);
-
-            Console.Write("\n");
+            //Console.WriteLine("Time taken to type with one finger = {0}\n", CalculateTime(keyboard, word));
 
 
 
-            int[,] intervals = { { 0, 30 }, { 5, 10 }, { 15, 20 } };
+            //int[,] image = { { 1, 1, 0 }, { 1, 0, 1 }, { 0, 0, 0 } };
 
-            int minMeetingRooms = MinMeetingRooms(intervals);
+            //int[,] flipAndInvertedImage = FlipAndInvertImage(image);
 
-            Console.WriteLine("Minimum meeting rooms needed = {0}\n", minMeetingRooms);
+            //Console.WriteLine("The resulting flipped and inverted image is:\n");
 
+            //Display2DArray(flipAndInvertedImage);
 
-
-            int[] arr = { -4, -1, 0, 3, 10 };
-
-            int[] sortedSquares = SortedSquares(arr);
-
-            Console.WriteLine("Squares of the array in sorted order is:");
-
-            DisplayArray(sortedSquares);
-
-            Console.Write("\n");
+            //Console.Write("\n");
 
 
 
-            string s = "abca";
+            //int[,] intervals = { { 0, 30 }, { 5, 10 }, { 15, 20 } };
 
-            if (ValidPalindrome(s))
-            {
+            //int minMeetingRooms = MinMeetingRooms(intervals);
 
-                Console.WriteLine("The given string \"{0}\" can be made PALINDROME", s);
+            //Console.WriteLine("Minimum meeting rooms needed = {0}\n", minMeetingRooms);
 
-            }
 
-            else
 
-            {
+            //int[] arr = { -4, -1, 0, 3, 10 };
 
-                Console.WriteLine("The given string \"{0}\" CANNOT be made PALINDROME", s);
+            //int[] sortedSquares = SortedSquares(arr);
 
-            }
+            //Console.WriteLine("Squares of the array in sorted order is:");
 
-        }*/
+            //DisplayArray(sortedSquares);
+
+            //Console.Write("\n");
+
+
+
+            //string s = "abca";
+
+            //if (ValidPalindrome(s))
+            //{
+
+            //    Console.WriteLine("The given string \"{0}\" can be made PALINDROME", s);
+
+            //}
+
+            //else
+
+            //{
+
+            //    Console.WriteLine("The given string \"{0}\" CANNOT be made PALINDROME", s);
+
+            //}
+
+            //}
+        }
 
 
 
@@ -209,6 +210,8 @@ namespace _2019_Fall_Assignment2
             {
                 int a = nums1.Length;
                 int b = nums2.Length;
+                Array.Sort(nums1);
+                Array.Sort(nums2);
                 int i = 0;
                 int j = 0;
                 
@@ -368,7 +371,18 @@ namespace _2019_Fall_Assignment2
 
             {
 
-                // Write your code here
+                
+                int[] result = new int[A.Length];
+                int[] sortedresult = new int[A.Length];
+                for (int i = 0; i < A.Length; i++)
+                {
+                    result[i] = A[i] * A[i];
+                }
+                Array.Sort(result);
+                for (int i = 0; i < result.Length; i++)
+                {
+                    Console.Write("{0},", result[i]);
+                }
 
             }
 
